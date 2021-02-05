@@ -8,7 +8,7 @@ PROJECT_ANALYSIS_PATH = $(PROJECT_ROOT_PATH)analysis
 CMN_SRC_PATH = $(PROJECT_SRC_PATH)/common
 
 APPLICATION_PATH = $(PROJECT_SRC_PATH)/application
-APPLICATION_MAKEPATH =  $(CTRL_PATH)/build
+APPLICATION_MAKEPATH =  $(APPLICATION_PATH)/build
 
 CC := gcc
 CPP := g++
@@ -42,8 +42,8 @@ else
   endef
 endif
 
-include $(APPLICATION_MAKEPATH)/application.mk
-include analysis.mk
+# include $(APPLICATION_MAKEPATH)/application.mk
+# include analysis.mk
 
 CFLAGS += -Wall
 CFLAGS += -Wextra 
@@ -68,15 +68,11 @@ endif
 	$(call echoInfo,"Compiling $<")
 	$(AT)$(CPP) $(CFLAGS) -c $< -o $(<:.cc=.o)
 
-# print: ctrl_print drivers_print pss_print rrs_print
-print: application_print
-	echo Drivers Target  $(DRVRS_TARGET)
-	$(call echoDone,"Root Path $(PROJECT_ROOT_PATH)")
-
+# print: application_print drivers_print pss_print rrs_print
 all: 
 
 clean ::
 	@$(PRINT) "Cleaning Complete $@\n"
 
 setuid:
-	chmod +s $(CTRL_TARGET)
+	chmod +s $(APPLICATION_TARGET)
