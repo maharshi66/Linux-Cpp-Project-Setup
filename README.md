@@ -4,65 +4,29 @@ This repository consists of a comprehensive folder structure with a source-code/
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-This project is meant to act as a template for any programmer who wants to build a C/C++ application from the ground-up. This template includes the following features that any Linux based C/C++ project might require:
+This project is meant to act as a template for any programmer who wants to build a C/C++ application from the ground-up. The template project includes easy usage of the following features in a typical C/C++ project that needs to be built:
 
-####Inter-Process Communication (POSIX)
-####Doxygen Source Code Documentation
-####CCCC (C and C++ Code Counter)
-####CppCheck (Static Tool Analysis)
-####Catch2 Unit Tests
+#### Inter-Process Communication library (POSIX Shared Memory and Message Queue)
+#### Doxygen Source Code Documentation
+#### CCCC (C and C++ Code Counter)
+#### CppCheck (Static C/C++ Code Analysis)
+#### Catch2 Unit Testing Setup
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+You will require a linux-distro to download and build the application. As the IPC uses Posix library, Windows OS will not be able to compile this project. This project was created using Ubuntu 20.04.2 LTS. This has also been tested on the latest Debian Buster release.  
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+This project is meant to be a starting point for a C/C++ application typically being run on an embedded system. 
 
 ```
-Give the example
+git clone https://github.com/maharshi66/Linux-Cpp-Project-Setup.git
+cd Linux-Cpp-Project-Setup
 ```
+Checkout the structure of the folder and the main makefile in the build folder inside the cpp-project-name to get a better hang of the setup. 
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
+![alt text](https://github.com/maharshi66/Linux-Cpp-Project-Setup/blob/main/resources/cpp_project_folder_structure.png?raw=true)
 
 ## Contributing
 
@@ -74,8 +38,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
+Maharshi Shah
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/maharshi66/Linux-Cpp-Project-Setup/blob/main/LICENSE) file for details
-
-## Acknowledgments
