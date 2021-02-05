@@ -7,17 +7,8 @@ PROJECT_ANALYSIS_PATH = $(PROJECT_ROOT_PATH)analysis
 
 CMN_SRC_PATH = $(PROJECT_SRC_PATH)/common
 
-CTRL_PATH = $(PROJECT_SRC_PATH)/ctrl
-CTRL_MAKEPATH =  $(CTRL_PATH)/build
-
-CTRL_DRVRS_PATH = $(CTRL_PATH)/drivers
-CTRL_DRVRS_MAKEPATH =  $(CTRL_DRVRS_PATH)/build
-
-PSS_PATH = $(PROJECT_SRC_PATH)/ps
-PSS_MAKEPATH =  $(PSS_PATH)/build
-
-RRS_PATH = $(PROJECT_SRC_PATH)/rr
-RRS_MAKEPATH =  $(RRS_PATH)/build
+APPLICATION_PATH = $(PROJECT_SRC_PATH)/application
+APPLICATION_MAKEPATH =  $(CTRL_PATH)/build
 
 CC := gcc
 CPP := g++
@@ -51,11 +42,7 @@ else
   endef
 endif
 
-
-include $(CTRL_MAKEPATH)/ctrl.mk
-include $(PSS_MAKEPATH)/pss.mk
-include $(RRS_MAKEPATH)/rrs.mk
-include $(CTRL_DRVRS_MAKEPATH)/drivers.mk
+include $(APPLICATION_MAKEPATH)/application.mk
 include analysis.mk
 
 CFLAGS += -Wall
@@ -82,18 +69,14 @@ endif
 	$(AT)$(CPP) $(CFLAGS) -c $< -o $(<:.cc=.o)
 
 # print: ctrl_print drivers_print pss_print rrs_print
-print: ctrl_print
+print: application_print
 	echo Drivers Target  $(DRVRS_TARGET)
 	$(call echoDone,"Root Path $(PROJECT_ROOT_PATH)")
 
-all: ctrl pss rrs
+all: 
 
 clean ::
-	@$(PRINT) "Cleaning done.. $@\n"
-
-amit:
-	echo CFLAGS $(CFLAGS)
-	echo PSS $(PSS_PRE_PROCESSOR_FLAG)
+	@$(PRINT) "Cleaning Complete $@\n"
 
 setuid:
 	chmod +s $(CTRL_TARGET)
