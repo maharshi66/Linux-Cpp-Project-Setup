@@ -6,11 +6,11 @@ This repository consists of a comprehensive folder structure with a source-code/
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 This project is meant to act as a template for any programmer who wants to build a C/C++ application from the ground-up. The template project includes easy usage of the following features in a typical C/C++ project that needs to be built:
 
-#### Inter-Process Communication library (POSIX Shared Memory and Message Queue)
-#### Doxygen Source Code Documentation
-#### CCCC (C and C++ Code Counter)
-#### CppCheck (Static C/C++ Code Analysis)
-#### Catch2 Unit Testing Setup
+#### [Inter-Process Communication library (POSIX Shared Memory and Message Queue)](https://en.wikipedia.org/wiki/Inter-process_communication)
+#### [Doxygen Source Code Documentation](https://www.doxygen.nl/index.html)
+#### [CCCC(C and C++ Code Counter)](https://sourceforge.net/projects/cccc/)
+#### [CppCheck (Static C/C++ Code Analysis)](https://en.wikipedia.org/wiki/Cppcheck)
+#### [Catch2 Unit Testing Setup](https://github.com/catchorg/Catch2)
 
 ### Prerequisites
 
@@ -38,7 +38,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-Maharshi Shah
+[Maharshi Shah](https://github.com/maharshi66)
 
 ## License
 
