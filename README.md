@@ -4,6 +4,13 @@ This repository consists of a comprehensive folder structure with a source-code/
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+This project is meant to act as a template for any programmer who wants to build a C/C++ application from the ground-up. This template includes the following features that any Linux based C/C++ project might require:
+
+####Inter-Process Communication (POSIX)
+####Doxygen Source Code Documentation
+####CCCC (C and C++ Code Counter)
+####CppCheck (Static Tool Analysis)
+####Catch2 Unit Tests
 
 ### Prerequisites
 
