@@ -40,8 +40,7 @@ else
   endef
 endif
 
-# include $(APPLICATION_MAKEPATH)/application.mk
-# include analysis.mk
+include $(APPLICATION_MAKEPATH)/application.mk
 
 CFLAGS += -Wall
 CFLAGS += -Wextra 
@@ -62,12 +61,12 @@ endif
 	$(call echoInfo,"Compiling $<")
 	$(AT)$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-.cc.o:
+.cpp.o:
 	$(call echoInfo,"Compiling $<")
-	$(AT)$(CPP) $(CFLAGS) -c $< -o $(<:.cc=.o)
+	$(AT)$(CPP) $(CFLAGS) -c $< -o $(<:.cpp=.o)
 
 # print: application_print drivers_print pss_print rrs_print
-all: 
+all: application
 
 clean ::
 	@$(PRINT) "Cleaning Complete $@\n"
