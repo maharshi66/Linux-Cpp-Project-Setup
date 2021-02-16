@@ -31,21 +31,6 @@ APPLICATION_OBJECTS =
 APPLICATION_OBJECTS += $(APPLICATION_CSRCS:.c=.o)
 APPLICATION_OBJECTS += $(APPLICATION_CPPSRCS:.cc=.o)
 
-override CCCC_CPP_FILES += $(APPLICATION_CPPSRCS)
-override CCCC_C_FILES += $(APPLICATION_CSRCS)
-	$(call echoWarning,"Printing Ctrl") 	
-	
-	$(call echoInfo,"OBJECTS: ")
-	@$(PRINT) $(APPLICATION_OBJECTS)
-	
-	$(call echoInfo,"INCLUDEPATH; ")
-	@$(PRINT) $(APPLICATION_INCLUDEPATH)
-	
-	$(call echoInfo,"LFLAGS: ")
-	@$(PRINT)  $(APPLICATION_LFLAGS)
-
-	$(call echoDone,"Done Printing Ctrl"
-
 $(APPLICATION_TARGET): $(APPLICATION_OBJECTS) 
 	$(call echoInfo,"Linking.. $@\n")
 	$(AT)$(CPP) $(APPLICATION_OBJECTS) $(APPLICATION_CFLAGS) $(APPLICATION_LFLAGS) -o $@
